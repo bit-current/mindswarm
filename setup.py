@@ -129,7 +129,8 @@ class BuildPy(build_py):
             download_p2p_daemon()
 
         super().run()
-
+        print("-----------")
+        print(os.path.join(self.build_lib, "hivemind", "proto"))
         proto_compile(os.path.join(self.build_lib, "hivemind", "proto"))
 
 
